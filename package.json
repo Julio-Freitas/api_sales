@@ -1,0 +1,24 @@
+{
+  "name": "api_sales",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Julio-Freitas/api_sales.git",
+  "author": "julio.freitas <julio.freitas@solides.com.br>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.5",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-prettier": "3.2.0",
+    "prettier": "^2.3.2",
+    "ts-node-dev": "^1.1.7",
+    "typescript": "^4.3.4"
+  }
+}
