@@ -3,3 +3,5 @@
 
   # api_sales packge 
    - ts-node-dev @types/node
+   - express cors express-async-erros
+
