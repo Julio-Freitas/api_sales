@@ -15,7 +15,8 @@ class CreateProductService {
     quantity,
   }: productType): Promise<productType> {
     const productsRepository = getCustomRepository(ProductRepository);
-    const hasProcut = await ProductRepository.findByName(name);
+
+    const hasProcut = await productsRepository.findByName(name);
 
     if (hasProcut)
       throw new AppErrors("There's already one product with this name!");

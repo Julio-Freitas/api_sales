@@ -19,9 +19,11 @@ export default class ListProductServices {
   }: productType): Promise<Product> {
     const productsRepository = getCustomRepository(ProductRepository);
     const products = await productsRepository.findOne(id);
+
     if (!products) throw new AppErrors('Product not found');
 
     const hasProcut = await productsRepository.findByName(name);
+
     if (hasProcut)
       throw new AppErrors("There's already one product with this name!");
 
