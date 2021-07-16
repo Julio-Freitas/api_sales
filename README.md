@@ -9,6 +9,12 @@
    - Create bd called api vendas
    - https://dbeaver.io/download/
    - Linux: sudo snap install dbeaver-ce
+   
+  ## migrations 
+   ```
+   yarn migration
+   
+   ``` 
 
 
 

@@ -3,8 +3,8 @@ import Product from '../entities/Product';
 type ProductType = Product | undefined;
 
 @EntityRepository(Product)
-class ProductRepository extends Repository<Product> {
-  public async findByName(name: string): Promise<ProductType> {
+export default class ProductRepository extends Repository<Product> {
+  static async findByName(name: string): Promise<ProductType> {
     const product = this.findOne({
       where: {
         name,
@@ -13,5 +13,3 @@ class ProductRepository extends Repository<Product> {
     return product;
   }
 }
-
-export default ProductRepository;
