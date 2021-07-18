@@ -10,8 +10,8 @@ class ProductRepository extends Repository<Product> {
         name,
       },
     });
+
     return product;
   }
 }
-
 export default ProductRepository;
