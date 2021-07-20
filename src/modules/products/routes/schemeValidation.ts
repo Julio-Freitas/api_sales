@@ -14,20 +14,16 @@ export const create = celebrate({
   },
 });
 
-export const update = celebrate(
-  {
-    [Segments.PARAMS]: {
-      id: Joi.string().uuid().required(),
-    },
+export const update = celebrate({
+  [Segments.PARAMS]: {
+    id: Joi.string().uuid().required(),
   },
-  {
-    [Segments.BODY]: {
-      name: Joi.string(),
-      price: Joi.number().precision(2),
-      quantity: Joi.number(),
-    },
+  [Segments.BODY]: {
+    name: Joi.string(),
+    price: Joi.number().precision(2),
+    quantity: Joi.number(),
   },
-);
+});
 
 export const del = celebrate({
   [Segments.PARAMS]: {
